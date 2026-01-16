@@ -1,0 +1,321 @@
+/* Website Settings & Accessibility Styles */
+
+/* Compact Mode */
+.compact-mode {
+  --spacing-scale: 0.75;
+}
+
+.compact-mode .p-4 {
+  padding: 0.75rem !important;
+}
+
+.compact-mode .p-6 {
+  padding: 1.125rem !important;
+}
+
+.compact-mode .py-8 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.compact-mode .py-12 {
+  padding-top: 2.25rem !important;
+  padding-bottom: 2.25rem !important;
+}
+
+.compact-mode .mb-4 {
+  margin-bottom: 0.75rem !important;
+}
+
+.compact-mode .mb-6 {
+  margin-bottom: 1.125rem !important;
+}
+
+.compact-mode .gap-4 {
+  gap: 0.75rem !important;
+}
+
+.compact-mode .gap-6 {
+  gap: 1.125rem !important;
+}
+
+/* No Animations Mode */
+.no-animations *,
+.no-animations *::before,
+.no-animations *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+.no-animations .animate-spin,
+.no-animations .animate-ping,
+.no-animations .animate-pulse,
+.no-animations .animate-bounce {
+  animation: none !important;
+}
+
+/* Auto-save indicator */
+[data-autosave="true"]::before {
+  content: "●";
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10b981;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  z-index: 9999;
+  opacity: 0;
+  animation: autosave-indicator 2s ease-in-out;
+}
+
+@keyframes autosave-indicator {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.high-contrast * {
+  border-color: #000 !important;
+}
+
+.high-contrast .bg-white {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.high-contrast .bg-gray-50,
+.high-contrast .bg-gray-100,
+.high-contrast .bg-gray-200 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.high-contrast .bg-gray-800,
+.high-contrast .bg-gray-900 {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-600,
+.high-contrast .text-gray-700 {
+  color: #000000 !important;
+}
+
+.high-contrast .text-gray-300,
+.high-contrast .text-gray-400 {
+  color: #ffffff !important;
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: 120% !important;
+}
+
+.large-text * {
+  font-size: inherit !important;
+}
+
+.large-text .text-xs {
+  font-size: 0.875rem !important;
+}
+
+.large-text .text-sm {
+  font-size: 1rem !important;
+}
+
+.large-text .text-base {
+  font-size: 1.25rem !important;
+}
+
+.large-text .text-lg {
+  font-size: 1.5rem !important;
+}
+
+.large-text .text-xl {
+  font-size: 1.875rem !important;
+}
+
+.large-text .text-2xl {
+  font-size: 2.25rem !important;
+}
+
+.large-text .text-3xl {
+  font-size: 2.875rem !important;
+}
+
+.large-text .text-4xl {
+  font-size: 3.5rem !important;
+}
+
+/* Reduced Motion Mode */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+.reduce-motion .animate-spin,
+.reduce-motion .animate-ping,
+.reduce-motion .animate-pulse,
+.reduce-motion .animate-bounce {
+  animation: none !important;
+}
+
+/* Color Blind Friendly Mode */
+.colorblind-friendly .bg-red-500,
+.colorblind-friendly .text-red-500,
+.colorblind-friendly .border-red-500 {
+  background-color: #0066cc !important;
+  color: #0066cc !important;
+  border-color: #0066cc !important;
+}
+
+.colorblind-friendly .bg-green-500,
+.colorblind-friendly .text-green-500,
+.colorblind-friendly .border-green-500 {
+  background-color: #ff9900 !important;
+  color: #ff9900 !important;
+  border-color: #ff9900 !important;
+}
+
+.colorblind-friendly .bg-yellow-500,
+.colorblind-friendly .text-yellow-500,
+.colorblind-friendly .border-yellow-500 {
+  background-color: #ffcc00 !important;
+  color: #ffcc00 !important;
+  border-color: #ffcc00 !important;
+}
+
+/* Enhanced Focus Styles */
+.keyboard-navigation *:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+.keyboard-navigation button:focus,
+.keyboard-navigation a:focus,
+.keyboard-navigation input:focus,
+.keyboard-navigation select:focus,
+.keyboard-navigation textarea:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High Contrast Focus Indicators */
+.high-contrast *:focus {
+  outline: 4px solid #000 !important;
+  outline-offset: 2px !important;
+  background-color: #ffff00 !important;
+  color: #000 !important;
+}
+
+/* Ensure text remains readable in high contrast */
+.high-contrast .text-white {
+  color: #ffffff !important;
+}
+
+.high-contrast .text-black {
+  color: #000000 !important;
+}
+
+/* Button and interactive element improvements */
+.high-contrast button,
+.high-contrast a,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  border: 2px solid #000 !important;
+}
+
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: #ffff00 !important;
+  color: #000 !important;
+}
+
+/* Improved visibility for form elements */
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  outline: 4px solid #000000 !important;
+}
+
+/* Ensure proper contrast for gradients */
+.high-contrast .bg-gradient-to-r,
+.high-contrast .bg-gradient-to-l,
+.high-contrast .bg-gradient-to-t,
+.high-contrast .bg-gradient-to-b,
+.high-contrast .bg-gradient-to-br,
+.high-contrast .bg-gradient-to-bl,
+.high-contrast .bg-gradient-to-tr,
+.high-contrast .bg-gradient-to-tl {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.high-contrast.dark .bg-gradient-to-r,
+.high-contrast.dark .bg-gradient-to-l,
+.high-contrast.dark .bg-gradient-to-t,
+.high-contrast.dark .bg-gradient-to-b,
+.high-contrast.dark .bg-gradient-to-br,
+.high-contrast.dark .bg-gradient-to-bl,
+.high-contrast.dark .bg-gradient-to-tr,
+.high-contrast.dark .bg-gradient-to-tl {
+  background: #000000 !important;
+  color: #ffffff !important;
+}

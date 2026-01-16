@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Circle with Gradient -->
+  <circle cx="80" cy="80" r="76" fill="url(#outerGradient)" class="animate-pulse">
+    <animate attributeName="r" values="76;78;76" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Inner Circle with Shine Effect -->
+  <circle cx="80" cy="80" r="60" fill="url(#innerGradient)">
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Center Icon -->
+  <path d="M80 40c22 0 40 18 40 40s-18 40-40 40-40-18-40-40 18-40 40-40z" fill="white" opacity="0.9"/>
+  <circle cx="80" cy="80" r="20" fill="url(#iconGradient)"/>
+  
+  <!-- Text -->
+  <text x="80" y="85" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" fill="white" font-weight="bold">FMI</text>
+  
+  <!-- Rotating Outer Ring -->
+  <circle cx="80" cy="80" r="72" stroke="url(#ringGradient)" stroke-width="2" fill="none" opacity="0.6">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 80 80"
+      to="360 80 80"
+      dur="10s"
+      repeatCount="indefinite"
+    />
+  </circle>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="outerGradient" x1="0" y1="0" x2="160" y2="160">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    
+    <radialGradient id="innerGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </radialGradient>
+    
+    <linearGradient id="iconGradient" x1="0" y1="0" x2="160" y2="160">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    
+    <linearGradient id="ringGradient" x1="0" y1="0" x2="0" y2="160">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+</svg>

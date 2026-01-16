@@ -1,0 +1,6 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="56" fill="#2563eb" stroke="#fff" stroke-width="8"/>
+  <path d="M60 30C75 30 90 45 90 60C90 75 75 90 60 90C45 90 30 75 30 60C30 45 45 30 60 30Z" fill="#fff"/>
+  <circle cx="60" cy="60" r="18" fill="#2563eb"/>
+  <text x="60" y="65" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">FMI</text>
+</svg>
